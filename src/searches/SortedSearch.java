@@ -31,17 +31,16 @@ public class SortedSearch {
             Integer[] sortedList = messyList.toArray(new Integer[0]);
             long methodEnding = System.nanoTime();
             long timeElapsed = methodEnding - methodBeginning;
-            double seconds = (double) timeElapsed / 1000000000.0;
-            System.out.println("\nThe number's sorting (using Random method) took " + seconds + " seconds");
+            System.out.println("\nThe number's sorting (using Random method) took " + timeElapsed + " nano seconds");
             System.out.println("Before bubbleSort method: ");
             System.out.println(Arrays.toString(sortedList));
             bubbleSort(sortedList);
             System.out.println(Arrays.toString(sortedList));
             System.out.print("\nType the element you want to fetch the index: ");
             Integer element = scanner.nextInt();
-            if (messyList.contains(element)) {
-                int elementIndex = Arrays.asList(sortedList).indexOf(element);
-                System.out.println("\nThe " + element + " index is " + elementIndex);
+            int searchedElement = linearSearch(messyList, element);
+            if (searchedElement != -1) {
+                System.out.println("The index of " + element + " is " + searchedElement);
             } else {
                 System.out.println("The given element is not present in the list");
             }
@@ -69,7 +68,28 @@ public class SortedSearch {
             }
             long methodEnding = System.nanoTime();
             long timeElapsed = methodEnding - methodBeginning;
-            double seconds = (double) timeElapsed / 1000000000.0;
-            System.out.println("\nThe bubbleSort's performance took " + seconds + " seconds");
+            System.out.println("\nThe bubbleSort's performance took " + timeElapsed + " nano seconds");
         }
+
+    /**
+     * Retrieve the index of given element
+     *
+     * @param vector vector
+     * @param element element
+     * @return the index of the element informed by the linear search algorithm
+     */
+    public static int linearSearch(List<Integer> vector, Integer element) {
+        long methodBeginning = System.nanoTime();
+        for (int index = 0; index < vector.size(); index++)
+            if (vector.get(index).equals(element)) {
+                long methodEnding = System.nanoTime();
+                long timeElapsed = methodEnding - methodBeginning;
+                System.out.println("\nThe linear search performance took " + timeElapsed + " nano seconds");
+                return index;
+            }
+        long methodEnding = System.nanoTime();
+        long timeElapsed = methodEnding - methodBeginning;
+        System.out.println("\nThe linear search performance took " + timeElapsed + " nano seconds");
+        return -1;
+    }
     }

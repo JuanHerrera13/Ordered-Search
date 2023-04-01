@@ -32,8 +32,7 @@ public class BinarySearch {
 
             long methodEnding = System.nanoTime();
             long timeElapsed = methodEnding - methodBeginning;
-            double seconds = (double) timeElapsed / 1000000000;
-            System.out.println("\nThe number's sorting (using Random method) took " + seconds + " seconds");
+            System.out.println("\nThe number's sorting (using Random method) took " + timeElapsed + " nano seconds");
             System.out.println("Before bubbleSort method: ");
             System.out.println(Arrays.toString(sortedList));
             bubbleSort(sortedList);
@@ -70,8 +69,7 @@ public class BinarySearch {
         }
         long methodEnding = System.nanoTime();
         long timeElapsed = methodEnding - methodBeginning;
-        double seconds = (double) timeElapsed / 1000000000;
-        System.out.println("\nThe bubbleSort's performance took " + seconds + " seconds");
+        System.out.println("\nThe bubbleSort's performance took " + timeElapsed + " nano seconds");
     }
 
     /**
@@ -90,8 +88,7 @@ public class BinarySearch {
             if (sortedList.get(middle) == element) {
                 long methodEnding = System.nanoTime();
                 long timeElapsed = methodEnding - methodBeginning;
-                double seconds = (double) timeElapsed / 1000000000;
-                System.out.println("\nThe binary search performance took " + seconds + " seconds");
+                System.out.println("\nThe binary search performance took " + timeElapsed + " nano seconds");
                 return middle;
             } else if (sortedList.get(middle) < element) {
                 beginning = middle + 1;
@@ -101,8 +98,7 @@ public class BinarySearch {
         }
         long methodEnding = System.nanoTime();
         long timeElapsed = methodEnding - methodBeginning;
-        double seconds = (double) timeElapsed / 1000000000.0;
-        System.out.println("\nThe binary search performance took " + seconds + " seconds");
+        System.out.println("\nThe binary search performance took " + timeElapsed + " nano seconds");
         return -1;
     }
 

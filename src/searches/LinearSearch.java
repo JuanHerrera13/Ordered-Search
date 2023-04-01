@@ -30,8 +30,7 @@ public class LinearSearch {
             } while (messyList.size() != VECTOR_SIZE.getValue());
             long methodEnding = System.nanoTime();
             long timeElapsed = methodEnding - methodBeginning;
-            double seconds = (double) timeElapsed / 1000000000.0;
-            System.out.println("\nThe number's sorting (using Random method) took " + seconds + " seconds");
+            System.out.println("\nThe number's sorting (using Random method) took " + timeElapsed + " nano seconds");
             System.out.println(messyList);
             System.out.print("\nType the element you want to fetch the index: ");
             Integer element = scanner.nextInt();
@@ -60,14 +59,12 @@ public class LinearSearch {
             if (vector.get(index).equals(element)) {
                 long methodEnding = System.nanoTime();
                 long timeElapsed = methodEnding - methodBeginning;
-                double seconds = (double) timeElapsed / 1000000000.0;
-                System.out.println("\nThe linear search performance took " + seconds + " seconds");
+                System.out.println("\nThe linear search performance took " + timeElapsed + " nano seconds");
                 return index;
             }
         long methodEnding = System.nanoTime();
         long timeElapsed = methodEnding - methodBeginning;
-        double seconds = (double) timeElapsed / 1000000000.0;
-        System.out.println("\nThe linear search performance took " + seconds + " seconds");
+        System.out.println("\nThe linear search performance took " + timeElapsed + " nano seconds");
         return -1;
     }
 }

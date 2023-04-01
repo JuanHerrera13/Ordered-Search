@@ -7,8 +7,8 @@ import lombok.Getter;
 @Getter
 public enum ConstantValues {
 
-    VECTOR_SIZE(200),
-    RANDOM_SIZE(250);
+    VECTOR_SIZE(50),
+    RANDOM_SIZE(100);
 
     private final int value;
 }
