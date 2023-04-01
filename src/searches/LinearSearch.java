@@ -9,6 +9,12 @@ import static enumerator.ConstantValues.VECTOR_SIZE;
 
 public class LinearSearch {
 
+    /**
+     * Retrieve a list of numbers and the index of the desired number
+     *
+     * @param args args
+     * @throws ElementException when a letter is passed in the search method
+     */
     public static void main(String[] args) throws ElementException {
         try {
             Locale.setDefault(Locale.US);
@@ -41,6 +47,13 @@ public class LinearSearch {
         }
     }
 
+    /**
+     * Retrieve the index of given element
+     *
+     * @param vector vector
+     * @param element element
+     * @return the index of the element informed by the linear search algorithm
+     */
     public static int linearSearch(List<Integer> vector, Integer element) {
         long methodBeginning = System.nanoTime();
         for (int index = 0; index < vector.size(); index++)

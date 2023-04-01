@@ -9,6 +9,12 @@ import static enumerator.ConstantValues.VECTOR_SIZE;
 
 public class SortedSearch {
 
+    /**
+     * Retrieve a list of numbers and the index of the desired number
+     *
+     * @param args args
+     * @throws ElementException when a letter is passed in the search method
+     */
     public static void main(String[] args) throws ElementException {
         try {
             Locale.setDefault(Locale.US);
@@ -45,6 +51,11 @@ public class SortedSearch {
         }
     }
 
+    /**
+     * Sort the numbers list in ascending order through bubble sort method
+     *
+     * @param messyList messyList
+     */
         public static void bubbleSort (Integer[]messyList){
             long methodBeginning = System.nanoTime();
             for (int index = 0; index < messyList.length - 1; index++) {

@@ -9,6 +9,12 @@ import static enumerator.ConstantValues.VECTOR_SIZE;
 
 public class BinarySearch {
 
+    /**
+     * Retrieve a list of numbers and the index of the desired number
+     *
+     * @param args args
+     * @throws ElementException when a letter is passed in the search method
+     */
     public static void main(String[] args) throws ElementException {
         try {
             Locale.setDefault(Locale.US);
@@ -46,6 +52,11 @@ public class BinarySearch {
         }
     }
 
+    /**
+     * Sort the numbers list in ascending order through bubble sort method
+     *
+     * @param messyList messyList
+     */
     public static void bubbleSort(Integer[] messyList) {
         long methodBeginning = System.nanoTime();
         for (int index = 0; index < messyList.length - 1; index++) {
@@ -63,6 +74,13 @@ public class BinarySearch {
         System.out.println("\nThe bubbleSort's performance took " + seconds + " seconds");
     }
 
+    /**
+     * Retrieve the index of given element
+     *
+     * @param sortedList sortedList
+     * @param element element
+     * @return the index of the element informed by the binary search algorithm
+     */
     public static int binarySearch(List<Integer> sortedList, int element) {
         long methodBeginning = System.nanoTime();
         int beginning = 0;
