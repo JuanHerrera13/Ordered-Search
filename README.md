@@ -1,0 +1,3 @@
+# Ordered-Search
+
+Algorithm homework 
